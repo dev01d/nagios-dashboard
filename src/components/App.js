@@ -7,7 +7,7 @@ import "../styles/App.css"
 
 function App() {
   return (
-    <div classname="container">
+    <div classname="container App">
       <TopCard />
       <BottomCard />
     </div>

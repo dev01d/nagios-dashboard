@@ -19,5 +19,5 @@ function creatCard(status) {
 }
 
 export default () => {
-  return <div className="cards">{statusCards.map(creatCard)}</div>
+  return <div className="status">{statusCards.map(creatCard)}</div>
 }
