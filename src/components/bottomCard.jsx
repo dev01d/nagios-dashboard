@@ -1,16 +1,16 @@
-import React from "react"
-import Card from "./Card"
+import React from 'react'
+import Card from './Card'
 
 var statusCards = [
   {
     id: 1,
-    title: "Service Status",
-    data: "0"
+    title: 'Host Status',
+    data: '0'
   },
   {
     id: 2,
-    title: "Host Status",
-    data: "0"
+    title: 'Service Status',
+    data: '0'
   }
 ]
 
