@@ -5,29 +5,29 @@ var d = new Date()
 function topCard() {
   return (
     <div className="cards">
-      <div className="card">
-        <h2>Time</h2>
-        <h3>{d.getHours() + ":" + d.getMinutes()}</h3>
+      <div className="card gray">
+        <h1>Time</h1>
+        <h2>{d.getHours() + ":" + d.getMinutes()}</h2>
       </div>
-      <div className="card">
-        <h2>OK</h2>
-        <h3>Data</h3>
+      <div className="card" id="ok">
+        <h1>OK</h1>
+        <h2>Data</h2>
       </div>
-      <div className="card">
-        <h2>Warning</h2>
-        <h3>Data</h3>
+      <div className="card" id="warning">
+        <h1>Warning</h1>
+        <h2>Data</h2>
       </div>
-      <div className="card">
-        <h2>Critical</h2>
-        <h3>Data</h3>
+      <div className="card" id="critical">
+        <h1>Critical</h1>
+        <h2>Data</h2>
       </div>
-      <div className="card">
-        <h2>Pending</h2>
-        <h3>Data</h3>
+      <div className="card" id="pending">
+        <h1>Pending</h1>
+        <h2>Data</h2>
       </div>
-      <div className="card">
-        <h2>Unknown</h2>
-        <h3>Data</h3>
+      <div className="card gray">
+        <h1>Unknown</h1>
+        <h2>Data</h2>
       </div>
     </div>
   )
