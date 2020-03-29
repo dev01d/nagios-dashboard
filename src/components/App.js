@@ -1,13 +1,12 @@
-import React from "react"
-import TopCard from "./topCard.jsx"
-import BottomCard from "./bottomCard.jsx"
-// import "../styles/barebones/barebones.css"
-import "../styles/barebones/normalize.css"
-import "../styles/App.css"
+import React from 'react'
+import TopCard from './topCard.jsx'
+import BottomCard from './bottomCard.jsx'
+import '../styles/normalize.css'
+import '../styles/App.css'
 
 function App() {
   return (
-    <div classname="container App">
+    <div className="container App">
       <TopCard />
       <BottomCard />
     </div>
