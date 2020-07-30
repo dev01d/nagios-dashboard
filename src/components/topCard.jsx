@@ -1,47 +1,43 @@
 import React from 'react'
 import Clock from 'react-live-clock'
 import {
-  serviceTopOk,
-  hostTopOk,
-  serviceTopWarn,
-  hostTopWarn,
-  serviceTopCritical,
-  hostTopCritical,
-} from './Data'
+  serviceOk,
+  hostOk,
+  serviceWarn,
+  hostWarn,
+  serviceCritical,
+  hostCritical,
+} from './api'
 
-export default function topCard() {
+export default function Card() {
   const {
-    serviceTopOkData,
-    isLoadingServiceTopOkData,
-    isErrorServiceTopOkData,
-  } = serviceTopOk()
-  const {
-    hostTopOkData,
-    isLoadingHostTopOkData,
-    isErrorHostTopOkData,
-  } = hostTopOk()
+    serviceOkData,
+    isLoadingServiceOkData,
+    isErrorServiceOkData,
+  } = serviceOk()
+  const { hostOkData, isLoadingHostOkData, isErrorHostOkData } = hostOk()
 
   const {
-    serviceTopWarnData,
-    isLoadingServiceTopWarnData,
-    isErrorServiceTopWarnData,
-  } = serviceTopWarn()
+    serviceWarnData,
+    isLoadingServiceWarnData,
+    isErrorServiceWarnData,
+  } = serviceWarn()
   const {
-    hostTopWarnData,
-    isLoadingHostTopWarnData,
-    isErrorHostTopWarnData,
-  } = hostTopWarn()
+    hostWarnData,
+    isLoadingHostWarnData,
+    isErrorHostWarnData,
+  } = hostWarn()
 
   const {
-    serviceTopCriticalData,
-    isLoadingServiceTopCriticalData,
-    isErrorServiceTopCriticalData,
-  } = serviceTopCritical()
+    serviceCriticalData,
+    isLoadingServiceCriticalData,
+    isErrorServiceCriticalData,
+  } = serviceCritical()
   const {
-    hostTopCriticalData,
-    isLoadingHostTopCriticalData,
-    isErrorHostTopCriticalData,
-  } = hostTopCritical()
+    hostCriticalData,
+    isLoadingHostCriticalData,
+    isErrorHostCriticalData,
+  } = hostCritical()
 
   return (
     <div className="cards">
@@ -53,49 +49,56 @@ export default function topCard() {
       </div>
       <div className="card" id="ok">
         <h1>OK</h1>
-        {isErrorServiceTopOkData || isErrorHostTopOkData ? (
+        {isErrorServiceOkData || isErrorHostOkData ? (
           <h2>Error</h2>
         ) : (
-          <h2>
-            {isLoadingServiceTopOkData || isLoadingHostTopOkData
-              ? 'Loading'
-              : serviceTopOkData.recordcount + hostTopOkData.recordcount}
-          </h2>
+          <div>
+            {isLoadingServiceOkData || isLoadingHostOkData ? (
+              <h2>Loading</h2>
+            ) : (
+              <h2>{serviceOkData.recordcount + hostOkData.recordcount}</h2>
+            )}
+          </div>
         )}
       </div>
       <div className="card" id="warning">
         <h1>Warning</h1>
-        {isErrorServiceTopWarnData || isErrorHostTopWarnData ? (
+        {isErrorServiceWarnData || isErrorHostWarnData ? (
           <h2>Error</h2>
         ) : (
-          <h2>
-            {isLoadingServiceTopWarnData || isLoadingHostTopWarnData
-              ? 'Loading'
-              : serviceTopWarnData.recordcount + hostTopWarnData.recordcount}
-          </h2>
+          <div>
+            {isLoadingServiceWarnData || isLoadingHostWarnData ? (
+              <h2>Loading</h2>
+            ) : (
+              <h2>{serviceWarnData.recordcount + hostWarnData.recordcount}</h2>
+            )}
+          </div>
         )}
       </div>
       <div className="card" id="critical">
         <h1>Critical</h1>
-        {isErrorServiceTopCriticalData || isErrorHostTopCriticalData ? (
+        {isErrorServiceCriticalData || isErrorHostCriticalData ? (
           <h2>Error</h2>
         ) : (
-          <h2>
-            {isLoadingServiceTopCriticalData || isLoadingHostTopCriticalData
-              ? 'Loading'
-              : serviceTopCriticalData.recordcount +
-                hostTopCriticalData.recordcount}
-          </h2>
+          <div>
+            {isLoadingServiceCriticalData || isLoadingHostCriticalData ? (
+              <h2>Loading</h2>
+            ) : (
+              <h2>
+                {serviceCriticalData.recordcount + hostCriticalData.recordcount}
+              </h2>
+            )}
+          </div>
         )}
       </div>
       <div className="card" id="pending">
         <h1>Pending</h1>
         <h2>0</h2>
       </div>
-      <div className="card gray">
+      {/* <div className="card gray">
         <h1>Unknown</h1>
         <h2>0</h2>
-      </div>
+      </div> */}
     </div>
   )
 }
