@@ -1,14 +1,16 @@
 //! eslint is disabled because it complains about SWR not being a recognized react hook
 /* eslint-disable */
 import useSWR from 'swr'
-import * as vars from '../data/vars'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
-// TODO: Write logic to check if alert has been acknowledgeds
+// TODO: Write logic to check if alert has been acknowledged
 function serviceOk() {
   const { data, error } = useSWR(
-    vars.URL + vars.SERVICE + vars.APIKEY + vars.OK,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_SERVICE +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_OK,
     fetcher,
     {
       refreshInterval: 30000,
@@ -22,7 +24,10 @@ function serviceOk() {
 }
 function hostOk() {
   const { data, error } = useSWR(
-    vars.URL + vars.HOST + vars.APIKEY + vars.OK,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_HOST +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_OK,
     fetcher,
     {
       refreshInterval: 30000,
@@ -36,7 +41,10 @@ function hostOk() {
 }
 function serviceWarn() {
   const { data, error } = useSWR(
-    vars.URL + vars.SERVICE + vars.APIKEY + vars.WARNING,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_SERVICE +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_WARNING,
     fetcher,
     {
       refreshInterval: 30000,
@@ -50,7 +58,10 @@ function serviceWarn() {
 }
 function hostWarn() {
   const { data, error } = useSWR(
-    vars.URL + vars.HOST + vars.APIKEY + vars.WARNING,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_HOST +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_WARNING,
     fetcher,
     {
       refreshInterval: 30000,
@@ -64,7 +75,10 @@ function hostWarn() {
 }
 function serviceCritical() {
   const { data, error } = useSWR(
-    vars.URL + vars.SERVICE + vars.APIKEY + vars.CRITICAL,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_SERVICE +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_CRITICAL,
     fetcher,
     {
       refreshInterval: 30000,
@@ -78,7 +92,10 @@ function serviceCritical() {
 }
 function hostCritical() {
   const { data, error } = useSWR(
-    vars.URL + vars.HOST + vars.APIKEY + vars.CRITICAL,
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_HOST +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_CRITICAL,
     fetcher,
     {
       refreshInterval: 30000,
