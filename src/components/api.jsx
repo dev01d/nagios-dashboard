@@ -107,6 +107,23 @@ function hostCritical() {
     isErrorHostCriticalData: error,
   }
 }
+function acknowledged() {
+  const { data, error } = useSWR(
+    process.env.REACT_APP_URL +
+      process.env.REACT_APP_HOST +
+      process.env.REACT_APP_APIKEY +
+      process.env.REACT_APP_CRITICAL,
+    fetcher,
+    {
+      refreshInterval: 30000,
+    }
+  )
+  return {
+    acknowledgedData: data,
+    isLoadingAcknowledged: !error && !data,
+    isErrorAcknowledged: error,
+  }
+}
 
 export {
   serviceOk,
@@ -115,4 +132,5 @@ export {
   hostWarn,
   serviceCritical,
   hostCritical,
+  acknowledged
 }
