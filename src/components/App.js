@@ -1,8 +1,7 @@
-import React from "react"
-import TopCard from "./topCard.jsx"
-import BottomCard from "./bottomCard.jsx"
-import "../styles/normalize.css"
-import "../styles/App.css"
+import React from 'react'
+import TopCard from './TopCard'
+import BottomCard from './BottomCard'
+import '../styles/App.css'
 
 function App() {
   return (

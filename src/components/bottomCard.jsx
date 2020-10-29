@@ -1,23 +1,24 @@
 import React from 'react'
-import Card from './Card'
+import HostBottom from './HostBottom'
+import ServiceBottom from './ServiceBottom'
 
-var statusCards = [
-  {
-    id: 1,
-    title: 'Host Status',
-    data: '0'
-  },
-  {
-    id: 2,
-    title: 'Service Status',
-    data: '0'
-  }
-]
-
-function creatCard(status) {
-  return <Card key={status.id} title={status.title} data={status.data} />
+function Target() {
+  return (
+    <div className="status">
+      <div className="card card-bottom gray">
+        <h1>Host</h1>
+        <div>
+          <HostBottom />
+        </div>
+      </div>
+      <div className="card card-bottom gray">
+        <h1>Services</h1>
+        <div className="scroll">
+          <ServiceBottom />
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default () => {
-  return <div className="status">{statusCards.map(creatCard)}</div>
-}
+export default Target
