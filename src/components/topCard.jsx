@@ -16,7 +16,6 @@ export default function Card() {
     isErrorServiceOkData,
   } = serviceOk()
   const { hostOkData, isLoadingHostOkData, isErrorHostOkData } = hostOk()
-
   const {
     serviceWarnData,
     isLoadingServiceWarnData,
@@ -27,7 +26,6 @@ export default function Card() {
     isLoadingHostWarnData,
     isErrorHostWarnData,
   } = hostWarn()
-
   const {
     serviceCriticalData,
     isLoadingServiceCriticalData,
@@ -42,7 +40,7 @@ export default function Card() {
   return (
     <div className="cards">
       <div className="card gray">
-        <h1>Time</h1>
+        <h1>Local Time</h1>
         <h2>
           <Clock />
         </h2>
@@ -96,8 +94,10 @@ export default function Card() {
         <h2>0</h2>
       </div>
       {/* <div className="card gray">
-        <h1>Unknown</h1>
-        <h2>0</h2>
+        <h1>Remote Time</h1>
+        <h2>
+          <Clock timezone={'US/Eastern'} />
+        </h2>
       </div> */}
     </div>
   )
