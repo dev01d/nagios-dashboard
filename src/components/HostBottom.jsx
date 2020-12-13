@@ -1,4 +1,3 @@
-import React from 'react'
 import { hostWarn, hostCritical } from './api'
 
 export default function HostBottom() {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { serviceWarn, serviceCritical } from './api'
 
 export default function ServiceBottom() {
