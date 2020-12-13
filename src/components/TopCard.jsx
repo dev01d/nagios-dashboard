@@ -38,13 +38,13 @@ export default function Card() {
   } = hostCritical()
 
   return (
-    <div className="cards">
-      <div className="card gray">
+    <div className="cards top">
+      {/*<div className="card gray">
         <h1>Local Time</h1>
         <h2>
           <Clock />
         </h2>
-      </div>
+      </div> */}
       <div className="card" id="ok">
         <h1>OK</h1>
         {isErrorServiceOkData || isErrorHostOkData ? (
@@ -93,7 +93,7 @@ export default function Card() {
         <h1>Pending</h1>
         <h2>0</h2>
       </div>
-      {/* <div className="card gray">
+      {/*<div className="card gray">
         <h1>Remote Time</h1>
         <h2>
           <Clock timezone={'US/Eastern'} />
