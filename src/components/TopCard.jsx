@@ -39,12 +39,12 @@ export default function Card() {
 
   return (
     <div className="cards top">
-      {/*<div className="card gray">
-        <h1>Local Time</h1>
+      <div className="card gray">
+        <h1>Pacific</h1>
         <h2>
-          <Clock />
+          <Clock timezone={'US/Pacific'} format="h:mm" ticking/>
         </h2>
-      </div> */}
+      </div>
       <div className="card" id="ok">
         <h1>OK</h1>
         {isErrorServiceOkData || isErrorHostOkData ? (
@@ -95,16 +95,16 @@ export default function Card() {
           </div>
         )}
       </div>
-      <div className="card" id="pending">
+      {/* <div className="card" id="pending">
         <h1>Pending</h1>
         <h2>0</h2>
-      </div>
-      {/*<div className="card gray">
-        <h1>Remote Time</h1>
-        <h2>
-          <Clock timezone={'US/Eastern'} />
-        </h2>
       </div> */}
+      <div className="card gray">
+        <h1>Eastern</h1>
+        <h2>
+          <Clock timezone={'US/Eastern'} format="h:mm" ticking/>
+        </h2>
+      </div>
     </div>
   )
 }
