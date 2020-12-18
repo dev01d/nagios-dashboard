@@ -2,15 +2,25 @@
 /* eslint-disable */
 import useSWR from 'swr'
 
+const {
+  REACT_APP_SERVICE,
+  REACT_APP_HOST,
+  REACT_APP_OK,
+  REACT_APP_CRITICAL,
+  REACT_APP_WARNING,
+  REACT_APP_URL,
+  REACT_APP_APIKEY
+} = process.env;
+
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 // TODO: Write logic to check if alert has been acknowledged
 function serviceOk() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_SERVICE +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_OK,
+    REACT_APP_URL +
+      REACT_APP_SERVICE +
+      REACT_APP_APIKEY +
+      REACT_APP_OK,
     fetcher,
     {
       refreshInterval: 30000,
@@ -24,10 +34,10 @@ function serviceOk() {
 }
 function hostOk() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_HOST +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_OK,
+    REACT_APP_URL +
+      REACT_APP_HOST +
+      REACT_APP_APIKEY +
+      REACT_APP_OK,
     fetcher,
     {
       refreshInterval: 30000,
@@ -41,10 +51,10 @@ function hostOk() {
 }
 function serviceWarn() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_SERVICE +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_WARNING,
+    REACT_APP_URL +
+      REACT_APP_SERVICE +
+      REACT_APP_APIKEY +
+      REACT_APP_WARNING,
     fetcher,
     {
       refreshInterval: 30000,
@@ -58,10 +68,10 @@ function serviceWarn() {
 }
 function hostWarn() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_HOST +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_WARNING,
+    REACT_APP_URL +
+      REACT_APP_HOST +
+      REACT_APP_APIKEY +
+      REACT_APP_WARNING,
     fetcher,
     {
       refreshInterval: 30000,
@@ -75,10 +85,10 @@ function hostWarn() {
 }
 function serviceCritical() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_SERVICE +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_CRITICAL,
+    REACT_APP_URL +
+      REACT_APP_SERVICE +
+      REACT_APP_APIKEY +
+      REACT_APP_CRITICAL,
     fetcher,
     {
       refreshInterval: 30000,
@@ -92,10 +102,10 @@ function serviceCritical() {
 }
 function hostCritical() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_HOST +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_CRITICAL,
+    REACT_APP_URL +
+      REACT_APP_HOST +
+      REACT_APP_APIKEY +
+      REACT_APP_CRITICAL,
     fetcher,
     {
       refreshInterval: 30000,
@@ -109,10 +119,10 @@ function hostCritical() {
 }
 function acknowledged() {
   const { data, error } = useSWR(
-    process.env.REACT_APP_URL +
-      process.env.REACT_APP_HOST +
-      process.env.REACT_APP_APIKEY +
-      process.env.REACT_APP_CRITICAL,
+    REACT_APP_URL +
+      REACT_APP_HOST +
+      REACT_APP_APIKEY +
+      REACT_APP_CRITICAL,
     fetcher,
     {
       refreshInterval: 30000,
