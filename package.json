@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-live-clock": "^5.0.13",
@@ -36,9 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "express": "^4.17.1",
-    "path": "^0.12.7"
   }
 }
