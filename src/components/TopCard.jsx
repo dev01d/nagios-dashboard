@@ -52,7 +52,9 @@ export default function Card() {
         ) : (
           <div>
             {isLoadingServiceOkData || isLoadingHostOkData ? (
-              <h2>Loading</h2>
+              <div className="loader-container-top">
+                <div className='loader'></div>
+              </div>
             ) : (
               <h2>{serviceOkData.recordcount + hostOkData.recordcount}</h2>
             )}
@@ -66,7 +68,9 @@ export default function Card() {
         ) : (
           <div>
             {isLoadingServiceWarnData || isLoadingHostWarnData ? (
-              <h2>Loading</h2>
+              <div className="loader-container-top">
+                <div className='loader'></div>
+              </div>
             ) : (
               <h2>{serviceWarnData.recordcount + hostWarnData.recordcount}</h2>
             )}
@@ -80,7 +84,9 @@ export default function Card() {
         ) : (
           <div>
             {isLoadingServiceCriticalData || isLoadingHostCriticalData ? (
-              <h2>Loading</h2>
+              <div className="loader-container-top">
+                <div className='loader'></div>
+              </div>
             ) : (
               <h2>
                 {serviceCriticalData.recordcount + hostCriticalData.recordcount}
