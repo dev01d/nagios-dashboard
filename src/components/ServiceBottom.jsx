@@ -14,7 +14,11 @@ export default function ServiceBottom() {
   if (isErrorServiceWarnData || isErrorServiceCriticalData)
     return <h2>Error fetcing data</h2>
   if (isLoadingServiceWarnData || isLoadingServiceCriticalData)
-    return <h2>Grabbing some data</h2>
+    return (
+      <div className="loader-container-bottom">
+        <div className='loader'></div>
+      </div>
+    )
   let recordCount =
     serviceCriticalData.recordcount + serviceWarnData.recordcount
   let dataCritical = serviceCriticalData.servicestatus

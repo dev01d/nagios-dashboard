@@ -11,14 +11,18 @@ export default function HostBottom() {
     isLoadingHostCriticalData,
     isErrorHostCriticalData,
   } = hostCritical()
+  // TODO: Need to better handle errors after hydrated and provide messages
   if (isErrorHostWarnData || isErrorHostCriticalData)
     return <h2>Error fetcing data</h2>
   if (isLoadingHostWarnData || isLoadingHostCriticalData)
-    return <h2>Grabbing some data</h2>
+    return (
+      <div className="loader-container-bottom">
+        <div className='loader'></div>
+      </div>
+    )
   let recordCount = hostCriticalData.recordcount + hostWarnData.recordcount
   let dataCritical = hostCriticalData.hoststatus
   let dataWarn = hostWarnData.hoststatus
-
   return (
     <div>
       {recordCount === 0 ? (
