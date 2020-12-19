@@ -3,11 +3,6 @@ const express = require("express");
 const app = express(); // create express app
 
 const {
-  REACT_APP_SERVICE,
-  REACT_APP_HOST,
-  REACT_APP_OK,
-  REACT_APP_CRITICAL,
-  REACT_APP_WARNING,
   REACT_APP_URL,
   REACT_APP_APIKEY
 } = process.env;
