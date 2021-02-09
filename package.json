@@ -15,7 +15,7 @@
     "react-live-clock": "^5.0.15",
     "react-moment": "^1.1.1",
     "react-scripts": "4.0.1",
-    "swr": "^0.4.1"
+    "swr": "^0.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
