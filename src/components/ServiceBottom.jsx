@@ -1,11 +1,8 @@
 import { serviceWarn, serviceCritical } from './api'
 
 export default function ServiceBottom() {
-  const {
-    serviceWarnData,
-    isLoadingServiceWarnData,
-    isErrorServiceWarnData,
-  } = serviceWarn()
+  const { serviceWarnData, isLoadingServiceWarnData, isErrorServiceWarnData } =
+    serviceWarn()
   const {
     serviceCriticalData,
     isLoadingServiceCriticalData,
@@ -16,7 +13,7 @@ export default function ServiceBottom() {
   if (isLoadingServiceWarnData || isLoadingServiceCriticalData)
     return (
       <div className="loader-container-bottom">
-        <div className='loader'></div>
+        <div className="loader"></div>
       </div>
     )
   let recordCount =

@@ -1,11 +1,8 @@
 import { hostWarn, hostCritical } from './api'
 
 export default function HostBottom() {
-  const {
-    hostWarnData,
-    isLoadingHostWarnData,
-    isErrorHostWarnData,
-  } = hostWarn()
+  const { hostWarnData, isLoadingHostWarnData, isErrorHostWarnData } =
+    hostWarn()
   const {
     hostCriticalData,
     isLoadingHostCriticalData,
@@ -17,7 +14,7 @@ export default function HostBottom() {
   if (isLoadingHostWarnData || isLoadingHostCriticalData)
     return (
       <div className="loader-container-bottom">
-        <div className='loader'></div>
+        <div className="loader"></div>
       </div>
     )
   let recordCount = hostCriticalData.recordcount + hostWarnData.recordcount

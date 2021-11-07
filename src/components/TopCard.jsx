@@ -10,22 +10,13 @@ import {
 } from './api'
 
 export default function Card() {
-  const {
-    serviceOkData,
-    isLoadingServiceOkData,
-    isErrorServiceOkData,
-  } = serviceOk()
+  const { serviceOkData, isLoadingServiceOkData, isErrorServiceOkData } =
+    serviceOk()
   const { hostOkData, isLoadingHostOkData, isErrorHostOkData } = hostOk()
-  const {
-    serviceWarnData,
-    isLoadingServiceWarnData,
-    isErrorServiceWarnData,
-  } = serviceWarn()
-  const {
-    hostWarnData,
-    isLoadingHostWarnData,
-    isErrorHostWarnData,
-  } = hostWarn()
+  const { serviceWarnData, isLoadingServiceWarnData, isErrorServiceWarnData } =
+    serviceWarn()
+  const { hostWarnData, isLoadingHostWarnData, isErrorHostWarnData } =
+    hostWarn()
   const {
     serviceCriticalData,
     isLoadingServiceCriticalData,
@@ -42,7 +33,7 @@ export default function Card() {
       <div className="card gray">
         <h1>Pacific</h1>
         <h2>
-          <Clock timezone={'US/Pacific'} format="h:mm" ticking/>
+          <Clock timezone={'US/Pacific'} format="h:mm" ticking />
         </h2>
       </div>
       <div className="card" id="ok">
@@ -53,7 +44,7 @@ export default function Card() {
           <div>
             {isLoadingServiceOkData || isLoadingHostOkData ? (
               <div className="loader-container-top">
-                <div className='loader'></div>
+                <div className="loader"></div>
               </div>
             ) : (
               <h2>{serviceOkData.recordcount + hostOkData.recordcount}</h2>
@@ -69,7 +60,7 @@ export default function Card() {
           <div>
             {isLoadingServiceWarnData || isLoadingHostWarnData ? (
               <div className="loader-container-top">
-                <div className='loader'></div>
+                <div className="loader"></div>
               </div>
             ) : (
               <h2>{serviceWarnData.recordcount + hostWarnData.recordcount}</h2>
@@ -85,7 +76,7 @@ export default function Card() {
           <div>
             {isLoadingServiceCriticalData || isLoadingHostCriticalData ? (
               <div className="loader-container-top">
-                <div className='loader'></div>
+                <div className="loader"></div>
               </div>
             ) : (
               <h2>
@@ -102,7 +93,7 @@ export default function Card() {
       <div className="card gray">
         <h1>Eastern</h1>
         <h2>
-          <Clock timezone={'US/Eastern'} format="h:mm" ticking/>
+          <Clock timezone={'US/Eastern'} format="h:mm" ticking />
         </h2>
       </div>
     </div>

@@ -2,20 +2,14 @@
 /* eslint-disable */
 import useSWR from 'swr'
 
-const {
-  REACT_APP_URL,
-  REACT_APP_APIKEY
-} = process.env;
+const { REACT_APP_URL, REACT_APP_APIKEY } = process.env
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 // TODO: Write logic to check if alert has been acknowledged
 function serviceOk() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'servicestatus' +
-      REACT_APP_APIKEY +
-      '&current_state=0',
+    REACT_APP_URL + 'servicestatus' + REACT_APP_APIKEY + '&current_state=0',
     fetcher,
     {
       refreshInterval: 30000,
@@ -29,10 +23,7 @@ function serviceOk() {
 }
 function hostOk() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'hoststatus' +
-      REACT_APP_APIKEY +
-      '&current_state=0',
+    REACT_APP_URL + 'hoststatus' + REACT_APP_APIKEY + '&current_state=0',
     fetcher,
     {
       refreshInterval: 30000,
@@ -46,10 +37,7 @@ function hostOk() {
 }
 function serviceWarn() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'servicestatus' +
-      REACT_APP_APIKEY +
-      '&current_state=1',
+    REACT_APP_URL + 'servicestatus' + REACT_APP_APIKEY + '&current_state=1',
     fetcher,
     {
       refreshInterval: 30000,
@@ -63,10 +51,7 @@ function serviceWarn() {
 }
 function hostWarn() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'hoststatus' +
-      REACT_APP_APIKEY +
-      '&current_state=1',
+    REACT_APP_URL + 'hoststatus' + REACT_APP_APIKEY + '&current_state=1',
     fetcher,
     {
       refreshInterval: 30000,
@@ -80,10 +65,7 @@ function hostWarn() {
 }
 function serviceCritical() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'servicestatus' +
-      REACT_APP_APIKEY +
-      '&current_state=2',
+    REACT_APP_URL + 'servicestatus' + REACT_APP_APIKEY + '&current_state=2',
     fetcher,
     {
       refreshInterval: 30000,
@@ -97,10 +79,7 @@ function serviceCritical() {
 }
 function hostCritical() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'hoststatus' +
-      REACT_APP_APIKEY +
-      '&current_state=2',
+    REACT_APP_URL + 'hoststatus' + REACT_APP_APIKEY + '&current_state=2',
     fetcher,
     {
       refreshInterval: 30000,
@@ -114,10 +93,7 @@ function hostCritical() {
 }
 function acknowledged() {
   const { data, error } = useSWR(
-      REACT_APP_URL +
-      'hoststatus' +
-      REACT_APP_APIKEY +
-      '&current_state=2',
+    REACT_APP_URL + 'hoststatus' + REACT_APP_APIKEY + '&current_state=2',
     fetcher,
     {
       refreshInterval: 30000,
@@ -137,5 +113,5 @@ export {
   hostWarn,
   serviceCritical,
   hostCritical,
-  acknowledged
+  acknowledged,
 }
