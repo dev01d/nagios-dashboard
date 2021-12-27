@@ -32,7 +32,7 @@ export default function ServiceBottom() {
               <div key={index}>
                 <h2 className="card-bottom-item">
                   {item.host_name}{' '}
-                  <span class="dot-critical" align="left"></span>
+                  <span className="dot-critical" align="left"></span>
                 </h2>
                 <h3>{item.output}</h3>
                 <hr size="5" width="600" />
@@ -43,7 +43,8 @@ export default function ServiceBottom() {
             {dataWarn.map((item, index) => (
               <div key={index}>
                 <h2 className="card-bottom-item">
-                  {item.host_name} <span class="dot-warn" align="left"></span>
+                  {item.host_name}{' '}
+                  <span className="dot-warn" align="left"></span>
                 </h2>
                 <h3>{item.output}</h3>
                 <hr size="5" width="600" />
