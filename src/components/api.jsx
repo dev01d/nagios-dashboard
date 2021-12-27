@@ -13,6 +13,7 @@ function serviceOk() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -27,6 +28,7 @@ function hostOk() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -41,6 +43,7 @@ function serviceWarn() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -55,6 +58,7 @@ function hostWarn() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -69,6 +73,7 @@ function serviceCritical() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -83,6 +88,7 @@ function hostCritical() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
@@ -97,6 +103,7 @@ function acknowledged() {
     fetcher,
     {
       refreshInterval: 30000,
+      refreshWhenHidden: true,
     }
   )
   return {
