@@ -19,7 +19,7 @@ file_env() {
 	unset "$fileVar"
 }
 
-file_env 'REACT_APP_URL'
-file_env 'REACT_APP_APIKEY'
+file_env 'URL'
+file_env 'APIKEY'
 
 exec "$@"
