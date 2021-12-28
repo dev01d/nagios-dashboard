@@ -2,4 +2,4 @@
 
 An easy to read Nagios dashboard.
 
-![](.github/images/screen-shot1.png)
+![](images/screen-shot1.png)
