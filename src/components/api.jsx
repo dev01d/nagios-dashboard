@@ -2,8 +2,8 @@
 /* eslint-disable */
 import useSWR from 'swr'
 
-const URL = process.env.NEXT_PUBLIC_URL
-const APIKEY = process.env.NEXT_PUBLIC_APIKEY
+const URL = process.env.URL
+const APIKEY = process.env.APIKEY
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
