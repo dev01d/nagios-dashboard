@@ -1,18 +1,13 @@
-.dockerignore
-docker
-Dockerfile
-Dockerfile.dev
-Dockerfile.prod
-docker-compose.yml
-
 .DS_Store
 .env*
+.git
 .github
 .gitignore
-example.env
 
 .eslintcache
 node_modules
-npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.env
+.env.*
