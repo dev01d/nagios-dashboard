@@ -1,0 +1,23 @@
+---
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /srv/certs:/etc/nginx/certs
+    environment:
+      - HTTPS_METHOD=nohttp
+
+  nagios-dashboard:
+    image: dev01d/nagios-dashboard
+    ports:
+      - 80:80
+    environment:
+      #! Dont quote values
+      - API_URL=https://your-nagios-server.com
+      - API_KEY=your-api-key
+      - VIRTUAL_HOST=
+      - VIRTUAL_PROTO=https
