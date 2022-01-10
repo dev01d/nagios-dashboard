@@ -24,8 +24,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Docker meta node
-        id: meta-node
+      - name: Docker meta
+        id: meta
         uses: docker/metadata-action@v3
         with:
           flavor: |
@@ -33,7 +33,7 @@ jobs:
           images: |
             dev01d/nagios-dashboard
           tags: |
-            type=raw,value=node,priority=1
+            type=semver,event=tag,pattern={{version}}
 
       - name: Build and push node
         uses: docker/build-push-action@v2
@@ -42,5 +42,5 @@ jobs:
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          labels: ${{ steps.meta-node.outputs.labels }}
-          tags: ${{ steps.meta-node.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
