@@ -72,9 +72,10 @@ h3 {
   grid-auto-rows: auto;
   grid-gap: 1rem;
   padding: 3rem;
+  padding-bottom: 0rem;
   margin-bottom: 0rem;
-  min-height: 35rem;
-  max-height: 45rem;
+  min-height: 45rem;
+  max-height: 50rem;
 }
 
 .gray {
