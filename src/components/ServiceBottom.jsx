@@ -1,4 +1,4 @@
-import { serviceWarn, serviceCritical } from './api'
+import { serviceWarn, serviceCritical } from '../../pages/api/data'
 
 export default function ServiceBottom() {
   const { serviceWarnData, isLoadingServiceWarnData, isErrorServiceWarnData } =
@@ -16,11 +16,13 @@ export default function ServiceBottom() {
         <div className="loader"></div>
       </div>
     )
-  let recordCount =
-    serviceCriticalData.recordcount + serviceWarnData.recordcount
-  let dataCritical = serviceCriticalData.servicestatus
-  let dataWarn = serviceWarnData.servicestatus
-
+  let dataWarn = serviceWarnData.servicestatus.filter(
+    (data) => data.problem_has_been_acknowledged == '0'
+  )
+  let dataCritical = serviceCriticalData.servicestatus.filter(
+    (data) => data.problem_has_been_acknowledged == '0'
+  )
+  let recordCount = dataCritical.length + dataWarn.length
   return (
     <div>
       {recordCount === 0 ? (

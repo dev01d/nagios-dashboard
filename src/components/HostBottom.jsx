@@ -1,4 +1,4 @@
-import { hostWarn, hostCritical } from './api'
+import { hostWarn, hostCritical } from '../../pages/api/data'
 
 export default function HostBottom() {
   const { hostWarnData, isLoadingHostWarnData, isErrorHostWarnData } =
@@ -8,7 +8,6 @@ export default function HostBottom() {
     isLoadingHostCriticalData,
     isErrorHostCriticalData,
   } = hostCritical()
-  // TODO: Need to better handle errors after hydrated and provide messages
   if (isErrorHostWarnData || isErrorHostCriticalData)
     return <h2>Error fetcing data</h2>
   if (isLoadingHostWarnData || isLoadingHostCriticalData)
@@ -17,9 +16,14 @@ export default function HostBottom() {
         <div className="loader"></div>
       </div>
     )
-  let recordCount = hostCriticalData.recordcount + hostWarnData.recordcount
-  let dataCritical = hostCriticalData.hoststatus
-  let dataWarn = hostWarnData.hoststatus
+  let dataWarn = hostCriticalData.hoststatus.filter(
+    (data) => data.problem_has_been_acknowledged == '0'
+  )
+  let dataCritical = hostWarnData.hoststatus.filter(
+    (data) => data.problem_has_been_acknowledged == '0'
+  )
+  let recordCount = dataCritical.length + dataWarn.length
+  console.log(dataWarn)
   return (
     <div>
       {recordCount === 0 ? (

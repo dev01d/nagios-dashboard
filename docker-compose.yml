@@ -1,9 +1,0 @@
-version: "2.4"
-services:
-  react-nagios-dashboard:
-    image: dev01d/react-nagios-dashboard:dev
-    ports:
-      - 3000:3000
-    environment:
-      - URL=
-      - APIKEY=
