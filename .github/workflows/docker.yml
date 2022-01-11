@@ -35,7 +35,7 @@ jobs:
           tags: |
             type=semver,event=tag,pattern={{version}}
 
-      - name: Build and push node
+      - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
