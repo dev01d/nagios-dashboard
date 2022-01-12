@@ -2,7 +2,7 @@
 
 An easy to read Nagios dashboard.
 
-![image](images/screen-shot1.png)
+![image](images/screenshot.png)
 
 ## Run
 
