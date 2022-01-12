@@ -37,7 +37,7 @@ export default function HostBottom() {
                   <span className="dot-critical" align="left"></span>
                 </h2>
                 <h3>{item.output}</h3>
-                <hr size="5" width="600" />
+                <hr />
               </div>
             ))}
           </div>
@@ -49,7 +49,7 @@ export default function HostBottom() {
                   <span className="dot-warn" align="left"></span>
                 </h2>
                 <h3>{item.output}</h3>
-                <hr size="5" width="600" />
+                <hr />
               </div>
             ))}
           </div>
