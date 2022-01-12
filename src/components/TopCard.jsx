@@ -13,12 +13,8 @@ export default function Card() {
   const { serviceOkData, isLoadingServiceOkData, isErrorServiceOkData } =
     serviceOk()
   const { hostOkData, isLoadingHostOkData, isErrorHostOkData } = hostOk()
-  const {
-    serviceWarnData,
-    serviceWarnDataCount,
-    isLoadingServiceWarnData,
-    isErrorServiceWarnData,
-  } = serviceWarn()
+  const { serviceWarnData, isLoadingServiceWarnData, isErrorServiceWarnData } =
+    serviceWarn()
   const { hostWarnData, isLoadingHostWarnData, isErrorHostWarnData } =
     hostWarn()
   const {
@@ -28,11 +24,9 @@ export default function Card() {
   } = serviceCritical()
   const {
     hostCriticalData,
-    hostCriticalDataCount,
     isLoadingHostCriticalData,
     isErrorHostCriticalData,
   } = hostCritical()
-
   let dataHostWarn = hostWarnData?.hoststatus.filter(
     (data) => data.problem_has_been_acknowledged == '0'
   )

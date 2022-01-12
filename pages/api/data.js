@@ -30,10 +30,8 @@ function serviceWarn() {
     refreshInterval: 30000,
     refreshWhenHidden: true,
   })
-  const count = data?.recordcount?.toString()
   return {
     serviceWarnData: data,
-    serviceWarnDataCount: count,
     isLoadingServiceWarnData: !error && !data,
     isErrorServiceWarnData: error,
   }
@@ -54,7 +52,6 @@ function serviceCritical() {
     refreshInterval: 30000,
     refreshWhenHidden: true,
   })
-  // console.log(count)
   return {
     serviceCriticalData: data,
     isLoadingServiceCriticalData: !error && !data,
@@ -66,10 +63,8 @@ function hostCritical() {
     refreshInterval: 30000,
     refreshWhenHidden: true,
   })
-  const count = data?.recordcount.toString()
   return {
     hostCriticalData: data,
-    hostCriticalDataCount: count,
     isLoadingHostCriticalData: !error && !data,
     isErrorHostCriticalData: error,
   }

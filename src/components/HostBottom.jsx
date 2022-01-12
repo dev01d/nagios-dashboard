@@ -23,7 +23,6 @@ export default function HostBottom() {
     (data) => data.problem_has_been_acknowledged == '0'
   )
   let recordCount = dataCritical.length + dataWarn.length
-  console.log(dataWarn)
   return (
     <div>
       {recordCount === 0 ? (
