@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { serviceWarn, serviceCritical } from '../../pages/api/data'
 
 export default function ServiceBottom() {

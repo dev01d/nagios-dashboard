@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { hostWarn, hostCritical } from '../../pages/api/data'
 
 export default function HostBottom() {
