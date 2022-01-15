@@ -36,7 +36,11 @@ export default function HostBottom() {
                   {item.host_name}{' '}
                   <span className="dot-critical" align="left"></span>
                 </h2>
-                <h3>{item.output}</h3>
+                <h3>
+                  {item.output}
+                  {` - Age: `}
+                  {moment(item.last_state_change).toNow(true)}
+                </h3>
                 <hr />
               </div>
             ))}
@@ -48,7 +52,11 @@ export default function HostBottom() {
                   {item.host_name}{' '}
                   <span className="dot-warn" align="left"></span>
                 </h2>
-                <h3>{item.output}</h3>
+                <h3>
+                  {item.output}
+                  {` - Age: `}
+                  {moment(item.last_state_change).toNow(true)}
+                </h3>
                 <hr />
               </div>
             ))}
