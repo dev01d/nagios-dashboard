@@ -1,9 +1,7 @@
-name: Build and push docker image
+name: Docker SemVer release
 
 on:
   push:
-    # branches:
-    #   - main
     tags:
       - "*"
 
