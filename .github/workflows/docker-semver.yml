@@ -36,7 +36,7 @@ jobs:
             type=semver,event=tag,pattern={{version}}
 
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./docker/Dockerfile
