@@ -9,7 +9,7 @@ export default function ServiceBottom() {
     isErrorServiceCriticalData,
   } = serviceCritical()
   if (isErrorServiceWarnData || isErrorServiceCriticalData)
-    return <h2>Error fetcing data</h2>
+    return <h2>Error fetching data</h2>
   if (isLoadingServiceWarnData || isLoadingServiceCriticalData)
     return (
       <div className="loader-container-bottom">

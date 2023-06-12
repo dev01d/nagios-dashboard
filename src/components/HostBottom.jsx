@@ -9,7 +9,7 @@ export default function HostBottom() {
     isErrorHostCriticalData,
   } = hostCritical()
   if (isErrorHostWarnData || isErrorHostCriticalData)
-    return <h2>Error fetcing data</h2>
+    return <h2>Error fetching data</h2>
   if (isLoadingHostWarnData || isLoadingHostCriticalData)
     return (
       <div className="loader-container-bottom">
