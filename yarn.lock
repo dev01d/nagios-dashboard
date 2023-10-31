@@ -1434,14 +1434,14 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
-moment-timezone@^0.5.43:
+moment-timezone@^0.5.33, moment-timezone@^0.5.43:
   version "0.5.43"
   resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.43.tgz#3dd7f3d0c67f78c23cd1906b9b2137a09b3c4790"
   integrity sha512-72j3aNyuIsDxdF1i7CEgV2FfxM1r6aaqJyLB2vwb33mXYyoyLly+F1zbWqhA3/bVIoJ4szlUoMbUnVdid32NUQ==
   dependencies:
     moment "^2.29.4"
 
-moment@^2.29.4:
+moment@^2.29.1, moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
@@ -1681,10 +1681,13 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-live-clock@^5.7.0:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/react-live-clock/-/react-live-clock-5.10.0.tgz#9b8f06edf3200ce8a400cff46e2c7dd6a5e1967f"
-  integrity sha512-fP7mwABotJuGFZ7eJ0QaMMxMX5niO23Oi4hfVi9x/6ktMdmVWH5oMmflDRz91QEczQDFjvkX3AzHGP2TM+XnOg==
+react-live-clock@^6.1.16:
+  version "6.1.16"
+  resolved "https://registry.yarnpkg.com/react-live-clock/-/react-live-clock-6.1.16.tgz#a410001c9046957a6608608827239d2a3d204a73"
+  integrity sha512-J8w3Af/gLG6Q+QB9+jAYm9cFBv6B1238KVSTBgpFiOHJkk7qJNlgTlEgUNDTBvKlHNauvk8QT+DyIZSCOIE6tg==
+  dependencies:
+    moment "^2.29.1"
+    moment-timezone "^0.5.33"
 
 react-moment@^1.1.1:
   version "1.1.3"
