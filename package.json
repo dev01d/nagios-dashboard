@@ -14,7 +14,7 @@
     "next": "14.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-live-clock": "^6.1.17",
+    "react-live-clock": "^6.1.18",
     "react-moment": "^1.1.1",
     "swr": "^2.2.4"
   },
